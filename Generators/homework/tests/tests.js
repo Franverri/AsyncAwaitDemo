@@ -20,7 +20,7 @@ const expected = [
   'Buzz', 'Fizz', 97, 98, 'Fizz', 'Buzz'
 ]
 
-describe('Requirements', () => {
+describe('Generator Function', () => {
   describe('fizzBuzzGenerator', () => {
     it('The generator is finite if a valid argument is passed in.', () => {
       const fizzBuzz = fizzBuzzGenerator(50)
@@ -39,10 +39,8 @@ describe('Requirements', () => {
         }
       }
     })
-  })
-})
+  });
 
-xdescribe('Bonus', () => {
   describe('fizzBuzzGenerator', () => {
     it('is an infinite generator if no argument is passed in.', () => {
       const fizzBuzz = fizzBuzzGenerator()
@@ -54,5 +52,5 @@ xdescribe('Bonus', () => {
         })
       }
     })
-  })
-})
+  });
+});

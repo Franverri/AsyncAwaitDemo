@@ -1,4 +1,4 @@
-function fizzBuzzGenerator() {
+function fizzBuzzGenerator(max) {
   // Tu código acá:
 
 }
