@@ -15,8 +15,7 @@ module.exports = {
   problemA: problemA,
   problemB: problemB,
   problemC: problemC,
-  problemD: problemD,
-  problemE: problemE
+  problemD: problemD
 };
 
 
