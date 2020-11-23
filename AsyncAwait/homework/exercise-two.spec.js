@@ -6,8 +6,9 @@ var expect = chai.expect;
 chai.use(require('chai-spies'));
 
 var utils = require('./utils');
-var blue = chai.spy.on(utils, 'blue');
-var magenta = chai.spy.on(utils, 'magenta');
+var customSpies = require('./exercise-one.spec.js');
+var blue = customSpies.blue;
+var magenta = customSpies.magenta;
 
 var fs = require('fs');
 var exercise = require('./exercise-two');
@@ -20,11 +21,15 @@ var stanzas = fs.readdirSync(dirpath)
 	return fs.readFileSync(path.join(dirpath, filename)).toString();
 });
 
+function resetCalls(spy) {
+	spy.__spy.calls = [];
+}
+
 describe('exercise two (involving poem two)', function () {
 
 	beforeEach(function () {
-		blue.reset();
-		magenta.reset();
+		resetCalls(blue);
+		resetCalls(magenta);
 	});
 
 	var blueCalls, redCalls;

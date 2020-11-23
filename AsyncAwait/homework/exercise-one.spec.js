@@ -34,11 +34,15 @@ function getCall (spy, n) {
 	return spy.__spy.calls[n] || [];
 }
 
+function resetCalls(spy) {
+	spy.__spy.calls = [];
+}
+
 describe('exercise one (involving poem one)', function () {
 
 	beforeEach(function () {
-		blue.reset();
-		magenta.reset();
+		resetCalls(blue);
+		resetCalls(magenta);
 	});
 
 	var blueCalls, magentaCalls;
@@ -186,3 +190,8 @@ describe('exercise one (involving poem one)', function () {
 
 	});
 });
+
+module.exports = {
+	blue,
+	magenta
+}

@@ -25,7 +25,7 @@ utils.promisifiedReadFile = function (filename) {
 	});
 };
 
-utils.bluee = function (text) {
+utils.blue = function (text) {
 	console.log(chalk.blue(text));
 };
 
